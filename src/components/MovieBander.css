@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Francois+One&display=swap');
+
+ul {
+    list-style: none;
+}
+
+.movie-body {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.movie {
+    border-radius: 5px;
+    width: 400px;
+    height: 300px;
+    margin: 5px;
+    padding: 10px;
+    background-color: #fff;
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+    display:flex;
+    transition: 0.3s;
+}
+
+.movie:hover {
+    margin-top: -10px;
+    box-shadow: 0 19px 38px rgba(0,0,0,0.40), 0 15px 12px rgba(0,0,0,0.40);
+}
+
+.movie__img {
+    margin-top: -30px;
+    width: 140px;
+    height: 180px;
+    border-radius: 5px;
+}
+
+.movie-info {
+    margin-left: 5px;
+    overflow-y: scroll;
+}
+
+.movie-info::-webkit-scrollbar {
+    width: 10px;
+    background-color: #fff;
+}
+
+.title {
+    text-decoration: none;
+    color:  #000;
+    font-size: 20px;
+    font-family: 'Varela Round', sans-serif;
+}
+
+.movie__year {
+    font-family: 'Varela Round', sans-serif;
+    margin-top: -10px;
+    font-size: 15px;
+    margin-left: 10px;
+}
+
+.movie__genres li{
+    font-family: 'Francois One', sans-serif;
+}

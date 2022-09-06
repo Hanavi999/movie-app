@@ -1,25 +1,32 @@
-import logo from './logo.svg';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import './App.css';
+import Home from './routes/Home';
+import Details from './routes/Details';
+import CaInfo from "./routes/CaInfo";
 
 function App() {
+
+  const scrollToTop = () => {
+    window.scrollTo(0, 0);
+    return null;
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    //00;
+    <Router>
+      <Routes>
+        <Route path="/movie/:id" element={<Details />}>
+        </Route>
+        <Route path="/" element={<Home />}>
+        </Route>
+        <Route path="/mostDownload" element={<CaInfo />} />
+        <Route path="/romance" element={<CaInfo />} />
+        <Route path="/animation" element={<CaInfo />} />
+        <Route path="/adventure" element={<CaInfo />} />
+      </Routes>
+      
+    </Router>
+  )
 }
 
 export default App;
